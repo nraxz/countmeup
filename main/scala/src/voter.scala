@@ -14,8 +14,9 @@ class voter {
   
     def addnew(voter_name: String) = {          
         
-         val insertrec = statement.executeUpdate("INSERT INTO tbl_voter (candidate_name) VALUES ('" + voter_name + "')")
-         val message = "New voter has been added successfully"       
+          val squery = "INSERT INTO tbl_voter (voter_name) VALUES ('" + voter_name + "')"
+          val insertrec = statement.executeUpdate(squery)
+          val message = "New voter has been added successfully"       
       
          } 
   
